@@ -6,12 +6,10 @@ def merge_list():
         for line in idwiki_file:
             words = line.split()
             idwiki.append(words)
-        #print(idwiki)
 
         for line in kompas_file:
             words = line.split()
             kompas.append(words)
-        #print(kompas)
 
     merged_words = [x for x in idwiki if not x in kompas]
     for line in merged_words:

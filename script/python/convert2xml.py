@@ -5,8 +5,6 @@ INPUT_FILE = "kompas.1gram"
 
 def clean_list():
     result = ""
-    #date_re = r"\d{2}/\d{2}/\d{4}"
-    #date_re = r"\d+/\d+/\d+"
     digit_re = r"\d+"
     sites_re = r".com$|.org$|.net$|.io$"
 
@@ -16,9 +14,6 @@ def clean_list():
             word = str(words[0])
             if ((not any(re.match(regex, word) for regex in [digit_re, sites_re])) and
             len(word)>1 and word != string.punctuation):
-                # result.append(words)
-                # result += str([foo for word in words])
-                #result = [x for x in words]
                 result += ','.join(words) + '\n'
 
         return result
