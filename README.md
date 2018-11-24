@@ -1,5 +1,7 @@
-# ask words id
-Indonesian Word List for AnySoftKeyboard
+# AnySoftKeyboard Indonesian Wordlist
+
+Indonesian Word List and utilities for AnySoftKeyboard
+
 
 # Authors
 - Azzam S.A
