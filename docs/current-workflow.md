@@ -16,7 +16,7 @@ kbbi list, but kbbi has more complete list. I also use
 
 ## Tidy up the sources
 
-- Remove digit, punctuation, one char only, and sites
+### Remove digit, punctuation, one char only, and sites
 
 I use `r"\d+"` to move digit all together. Before I use
 `r"\d{2}/\d{2}/\d{4}` for date format and `r"\d+/\d+/\d+"` but it's
@@ -40,7 +40,7 @@ def clean_list():
 
 ```
 
-- Make a xml word list
+### Make a xml word list
 
 min_allowed and max_allowed are default value in android
 dictionary. min_value and max_value are specified according to your
@@ -115,7 +115,7 @@ Since the initial word is coming from kompas and wikipedia. There a
 lot of unofficial word (slank word). So I have to pick only the
 official one.
 
-- Remove clutter items from kbbi e.g digit inside parens
+### Remove clutter items from kbbi e.g digit inside parens
 
 ``` python
 import re
@@ -130,7 +130,7 @@ with open('kbbi-web.txt') as file:
 ```
 The script I use for this is [rm_paren.py](/script/python/rm_paren.py)
 
-- Pick word if match the word from kbbi
+### Pick word if match the word from kbbi
 
 I use kbbi from [kbbi-web-id](/raw_data/kbbi-web.txt)
 
@@ -195,7 +195,6 @@ The script I use for this is [remove_awalan.py](/script/python/remove_awalan.py)
 
 This has the same logic as 'Make a xml word list'
 
-
 # Autotext wordlist
 
 I get use [Wikipedia:Daftar kosakata bahasa Indonesia yang sering_salah dieja](https://id.wikipedia.org/wiki/Wikipedia:Daftar_kosakata_bahasa_Indonesia_yang_sering_salah_dieja)
@@ -208,4 +207,3 @@ for autotext wordlist.
 
 Beware of the slicing `foo[0]` in those script. Double check that
 there no word missing.
-
