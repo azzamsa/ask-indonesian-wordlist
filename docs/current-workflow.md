@@ -1,3 +1,24 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [My current workflow](#my-current-workflow)
+    - [Getting the sources](#getting-the-sources)
+    - [Tidy up the sources](#tidy-up-the-sources)
+        - [Remove digit, punctuation, one char only, and sites](#remove-digit-punctuation-one-char-only-and-sites)
+    - [Create the xml wordlist](#create-the-xml-wordlist)
+    - [Merge two list and remove duplicate.](#merge-two-list-and-remove-duplicate)
+    - [Remove cluttered items from kbbi e.g digit inside parens](#remove-cluttered-items-from-kbbi-eg-digit-inside-parens)
+    - [Remove non official word (slank word)](#remove-non-official-word-slank-word)
+    - [Add missing KBBI words](#add-missing-kbbi-words)
+    - [Add missing result to wordlist (manually)](#add-missing-result-to-wordlist-manually)
+    - [Remove prefix word](#remove-prefix-word)
+    - [Create final wordlist](#create-final-wordlist)
+- [Autotext wordlist](#autotext-wordlist)
+- [Note](#note)
+
+<!-- markdown-toc end -->
+
+
 # My current workflow
 
 This document describe the steps I took to make Indonesian wordlist
@@ -40,7 +61,7 @@ def clean_list():
 
 ```
 
-### Make a xml word list
+## Create the xml wordlist
 
 min_allowed and max_allowed are default value in android
 dictionary. min_value and max_value are specified according to your
@@ -109,13 +130,8 @@ def merge_files():
 
 The script I use for this is [merge_list.py](/script/python/merge_list.py)
 
-## Remove non official word (slank word)
 
-Since the initial word is coming from kompas and wikipedia. There a
-lot of unofficial word (slank word). So I have to pick only the
-official one.
-
-### Remove clutter items from kbbi e.g digit inside parens
+## Remove cluttered items from kbbi e.g digit inside parens
 
 ``` python
 import re
@@ -130,7 +146,12 @@ with open('kbbi-web.txt') as file:
 ```
 The script I use for this is [rm_paren.py](/script/python/rm_paren.py)
 
-### Pick word if match the word from kbbi
+## Remove non official word (slank word)
+
+Since the initial word is coming from kompas and wikipedia. There a
+lot of unofficial word (slank word). So I have to pick only the
+official one.
+
 
 I use kbbi from [kbbi-web-id](/raw_data/kbbi-web.txt)
 
