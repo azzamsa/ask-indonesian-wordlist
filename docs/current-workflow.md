@@ -207,5 +207,5 @@ for autotext wordlist.
 
 Beware of the slicing `foo[0]` in those script. Double check that
 there no word missing. Ensure you get the correct output from `reading
-line by line`. Sometimes you have to use `split('\n)` or just read those lines
+line by line`. Sometimes you have to use `split('\n')` or just read those lines
 directly `for line in file`.
