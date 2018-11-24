@@ -82,9 +82,9 @@ The complete script for this is [convert2xml](/script/python/convert2xml.py)
 Anysoftkeyboard. But I have additional step to make better wordlist.
 
 
-## Merge list between 'kompas.1gram' and 'idwiki.1gram' (manually)
+## Merge two list and remove duplicate.
 
-Merge two list and remove duplicate.
+Merge list between 'kompas.1gram' and 'idwiki.1gram'
 
 ``` python
 def merge_files():
@@ -206,4 +206,6 @@ for autotext wordlist.
 # Note
 
 Beware of the slicing `foo[0]` in those script. Double check that
-there no word missing.
+there no word missing. Ensure you get the correct output from `reading
+line by line`. Sometimes you have to use `split('\n)` or just read those lines
+directly `for line in file`.
